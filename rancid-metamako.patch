@@ -36,14 +36,22 @@
  mrv.pm: mrv.pm.in
  nxos.pm: nxos.pm.in
  panos.pm: panos.pm.in
-471a472,481
-> metamako;script;rancid -t metamako
-> metamako;login;clogin
-> metamako;module;mos
-> metamako;inloop;mos::inloop
-> metamako;command;mos::ShowVersion;show version
-> metamako;command;mos::ShowEnv;show env all
-> metamako;command;mos::ShowBoot;show boot
-> metamako;command;mos::ShowInventory;show inventory
-> metamako;command;mos::WriteTerm;show running-config
-> #
+--- etc/rancid.types.base.orig	2016-11-16 21:20:57.327579992 +0000
++++ etc/rancid.types.base	2016-11-16 21:22:54.109573689 +0000
+@@ -469,6 +469,16 @@
+ juniper-srx;command;junos::ShowConfiguration;show configuration system
+ juniper-srx;command;junos::ShowConfiguration;show configuration vlans
+ #
++metamako;script;rancid -t metamako
++metamako;login;clogin
++metamako;module;mos
++metamako;inloop;mos::inloop
++metamako;command;mos::ShowVersion;show version
++metamako;command;mos::ShowEnv;show env all
++metamako;command;mos::ShowBoot;show boot
++metamako;command;mos::ShowInventory;show inventory
++metamako;command;mos::WriteTerm;show running-config
++#
+ mikrotik;script;mtrancid
+ mikrotik;login;mtlogin
+ #
